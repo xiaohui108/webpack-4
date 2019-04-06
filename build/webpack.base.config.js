@@ -33,7 +33,7 @@ module.exports = {
       ...(config.dev.useEslint ? [webpackEslintRule()] : []),
       {
         test: /\.js$/,
-        // exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
